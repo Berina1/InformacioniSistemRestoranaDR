@@ -1,0 +1,62 @@
+<button class="back-button" [routerLink]="'/meni'"> &#8592; Vrati se</button>
+
+<h1 class="logo">
+  Palate <img src="assets/images/logo.png" alt="Logo" class="logo-image" /> Palace
+</h1>
+
+<div class="container">
+  <h2>Forma za Kreiranje Narudžbe</h2>
+
+  <form id="orderForm">
+    <div id="order-items-container">
+      <div *ngFor="let item of orderItems; let i = index" class="order-item">
+        <label for="dish{{i}}">Naziv jela/pića:</label>
+        <select
+          [(ngModel)]="item.meniID"
+          name="dish{{i}}"
+          class="dish"
+          required
+          (change)="updatePrice()"
+        >
+          <option value="" disabled>Odaberite kategoriju</option>
+          <option *ngFor="let dish of dishes" [value]="dish.meniID">
+            {{ dish.naziv }} - {{ dish.cijena }} KM
+          </option>
+        </select>
+
+        <div class="quantity-container">
+          <label for="quantity{{i}}">Količina:</label>
+          <input
+            [(ngModel)]="item.kolicina"
+            type="number"
+            name="quantity{{i}}"
+            class="quantity"
+            min="1"
+            required
+            (input)="updatePrice()"
+          />
+        </div>
+
+        <button type="button" (click)="removeItem(i)">❌</button>
+      </div>
+    </div>
+
+    <div class="price-and-add">
+      <label for="total" class="price-label">Ukupna cijena:</label>
+      <input type="text" id="total" [value]="total | number: '1.2-2'" readonly />
+    </div>
+
+    <button type="button" class="cancel-btn" (click)="addItem()">
+      <i class="fas fa-plus" style="color: white;"></i> Dodaj
+    </button>
+
+    <div class="options">
+      <button type="button" class="cancel-btn" (click)="confirmOrder()">
+        <i class="fas fa-check" style="color: white;"></i> Potvrdi
+      </button>
+      <button type="button" class="cancel-btn" (click)="resetForm()">
+        <i class="fas fa-times" style="color: white;"></i> Poništi
+      </button>
+    </div>
+  </form>
+</div>

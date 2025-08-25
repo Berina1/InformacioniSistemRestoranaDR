@@ -1,0 +1,52 @@
+<button class="back-button" (click)="goBack()"> &#8592; Vrati se</button>
+
+<div id="orders-container" *ngIf="!errorMessage">
+  <div *ngFor="let order of orders">
+    <h2>Narudžba {{ order.narudzbaID }}</h2>
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>Naziv jela</th>
+          <th>Količina</th>
+          <th>Cijena</th>
+          <th>Ukupno</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let detalj of order.detaljiNarudzbeDTO">
+          <td>{{ detalj.meni.naziv }}</td>
+          <td>{{ detalj.kolicina }}</td>
+          <td>{{ detalj.meni.cijena.toFixed(2) }}</td>
+          <td>{{ detalj.ukupnaCijena.toFixed(2) }}</td>
+        </tr>
+        <tr *ngIf="order.detaljiNarudzbeDTO.length === 0">
+          <td colspan="4">Nema stavki u ovoj narudžbi.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="status-container"
+      style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+      <div>
+        <button *ngFor="let status of ['Kreirana', 'U pripremi', 'Postavljeno', 'Završeno']"
+          [ngClass]="{'active-status': status === order.status}" (click)="updateOrderStatus(order.narudzbaID, status)">
+          {{ status }}
+        </button>
+      </div>
+
+      <button (click)="setPaymentMethod(order.narudzbaID, 'Gotovina')"
+        [ngClass]="{'selected-payment': selectedPaymentMethods[order.narudzbaID] === 'Gotovina'}"
+        class="payment-button">
+        Gotovina
+      </button>
+      <button (click)="setPaymentMethod(order.narudzbaID, 'Kartica')"
+        [ngClass]="{'selected-payment': selectedPaymentMethods[order.narudzbaID] === 'Kartica'}" class="payment-button">
+        Kartica
+      </button>
+
+      <button (click)="generateInvoice(order.narudzbaID)" class="generate-invoice-button">
+        Generiši račun
+      </button>
+    </div>
+  </div>
+</div>

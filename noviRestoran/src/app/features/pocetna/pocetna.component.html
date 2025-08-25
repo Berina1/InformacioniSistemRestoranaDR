@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Početna</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <h1 class="logo">
+                    Palate <img src="assets/images/logo.png" alt="Logo" class="logo-image"> Palace
+                </h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a routerLink="/pocetna">Početna</a></li>
+                    <li><a routerLink="/onama">O Nama</a></li>
+                    <li><a routerLink="/meni">Meni</a></li>
+
+                    <li *ngIf="roleService.isAdmin() || roleService.isKonobar()">
+                        <a routerLink="/sveRezervacije">Sve Rezervacije</a>
+                    </li>
+
+                    <li *ngIf="roleService.isAdmin() || roleService.isKonobar() || roleService.isKuhar()">
+                        <a routerLink="/sveNarudzbe">Sve Narudžbe</a>
+                    </li>
+
+                    <li><a routerLink="/kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <a class="btn-getstarted" [routerLink]="'/rezervacije'">Rezervacija</a>
+            <button class="logout-button" (click)="logout()">
+                <i class="fas fa-sign-out-alt"></i> Odjavi se
+            </button>
+
+        </div>
+    </header>
+
+
+    <main class="main">
+        <section id="hero" class="hero section light-background">
+
+            <div class="container">
+                <div class="row gy-4 justify-content-center justify-content-lg-between">
+                    <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                        <h1 data-aos="fade-up">Gdje svaki zalogaj svoju<br>Priču priča</h1>
+                        <p data-aos="fade-up" data-aos-delay="100">Tim koji spaja vrhunsku gastronomiju s modernim
+                            digitalnim rješenjima za nezaboravno iskustvo gostiju.</p>
+                        <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                            <a [routerLink]="'/rezervacije'" class="btn-get-started">Rezervacija</a>
+
+
+                        </div>
+                    </div>
+
+
+                    <!-- <div style="text-align: center">
+                        <h1>
+                        Welcome to QR Code Generator in Angular 17 Applications! </h1>
+                        <qrcode [qrdata]="myAngularxQrCode" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+
+                        </div> -->
+
+                    <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+                        <img src="assets/images/hero-img.png" class="img-fluid animated" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <footer class="footer">
+            <div class="footer-container">
+
+                <div class="footer-column">
+                    <div class="footer-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p class="footer-title">Lokacija</p>
+                    </div>
+                    <p>New York, NY 535022</p>
+                    <p>A108 Mike Street</p>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p class="footer-title">Kontakt inf.</p>
+                    </div>
+                    <p>Tel: +1 5589 55488 55 </p>
+                    <p>Email: palate-palace.com</p>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-item">
+                        <i class="fas fa-clock"></i>
+                        <p class="footer-title">Radno Vrijeme</p>
+                    </div>
+                    <p>Pon-Sub: 11:00h - 23:00h</p>
+                    <p>Ned: Neradno</p>
+                </div>
+
+                <div class="footer-column">
+                    <p class="footer-title">Pratite Nas</p>
+                    <div class="social-icons">
+                        <a href="https://twitter.com" class="social-icon" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com" class="social-icon" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" class="social-icon" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" class="social-icon" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 All rights reserved.</p>
+                <p>Designed by <span class="name">Berina Topalovic</span></p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

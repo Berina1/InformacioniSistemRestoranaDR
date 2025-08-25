@@ -1,0 +1,70 @@
+namespace Restoran.Models
+{
+    public class Meni
+    {
+        public int MeniID { get; set; }
+        public string Naziv { get; set; }
+        public string Kategorija { get; set; }
+        public decimal Cijena { get; set; }
+        public string Opis { get; set; }
+    }
+}
+
+    
+
+using Restoran.Models;
+
+namespace Restoran.Models
+{
+    public class Narudzba
+    {
+        public int NarudzbaID { get; set; }
+        public int StoID { get; set; }
+        public int KorisnikID { get; set; }
+        public DateTime VrijemeNarudzbe { get; set; }
+        public string Status { get; set; }
+
+    }
+}
+
+
+
+ 
+
+
+
+using Restoran.Models;
+
+namespace Restoran.Models
+{
+    public class Racun
+    {
+        public int RacunID { get; set; }
+        public int NarudzbaID { get; set; }
+        public decimal Ukupno { get; set; }
+        public string NacinPlacanja { get; set; }
+        public DateTime VrijemePlacanja { get; set; }
+
+    }
+}
+
+
+
+
+
+using Restoran.Models;
+
+namespace Restoran.Models
+{
+    public class Rezervacija
+    {
+        public int RezervacijaID { get; set; }
+        public int StoID { get; set; }
+        public string RezervisanoOd { get; set; }
+        public DateTime VrijemeRezervacije { get; set; }
+        public string KontaktBroj { get; set; }
+        public string Status { get; set; }
+
+    }
+}
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="bs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registracija Korisnika</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="right-panel">
+            <h2>Registracija Korisnika</h2>
+            <p>Kreirajte svoj račun i pridružite nam se danas!</p>
+        </div>
+        <div class="left-panel">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="input-group">
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    <input type="text" formControlName="ImePrezime" placeholder="Ime i Prezime" required>
+                </div>
+                <div class="input-group">
+                    <span class="icon"><i class="fas fa-user-circle"></i></span>
+                    <input type="text" formControlName="KorisnickoIme" placeholder="Korisničko Ime" required>
+                </div>
+                <div class="input-group">
+                    <span class="icon"><i class="fas fa-envelope"></i></span>
+                    <input type="email" formControlName="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <span class="icon"><i class="fas fa-lock"></i></span>
+                    <input type="password" formControlName="lozinka" placeholder="Šifra" required>
+                </div>
+                <button type="submit" class="register-btn" [disabled]="registerForm.invalid">REGISTRUJ SE</button>
+            </form>
+
+            <p *ngIf="successMessage" class="success">{{ successMessage }}</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #ce1212;
+    border-radius: 30px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.table-container {
+    position: relative;
+    margin: 30px auto;
+    width: 70%;
+    max-width: 800px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead th {
+    background-color: #CE1212;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #CE1212;
+}
+
+tbody td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#orders-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.order {
+    margin-bottom: 30px;
+    background-color: #ffe9ec;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.order h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #3d000f;
+    text-align: center;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.orders-table th {
+    background-color: #3d000f;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #3d000f;
+}
+
+.orders-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.status-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.status-container button {
+    padding: 8px 16px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-left: -3px;
+}
+
+button.active-status {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #45a049;
+}
+
+
+button.active-status:hover {
+    background-color: #45a049;
+}
+
+.payment-button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-right: 110px;
+    gap: -10px;
+}
+
+.payment-button:hover {
+    background-color: #f0f0f0;
+}
+
+.generate-invoice-button {
+    background-color: orange;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.generate-invoice-button:hover {
+    background-color: orange;
+}

@@ -1,0 +1,46 @@
+<div *ngIf="loading">Loading invoice...</div>
+<div *ngIf="error">{{ error }}</div>
+
+<div *ngIf="racun">
+    <h1 class="logo">
+        Palate <img src="assets/images/logo.png" alt="Logo" class="logo-image"> Palace
+    </h1>
+    <div class="header">
+        <div class="left">
+            <div><i class="fas fa-map-marker-alt"></i> New York, NY 535022</div>
+            <div><i class="fas fa-phone-alt"></i> +1 5589 55488 55</div>
+        </div>
+        <div class="right">
+            <div class="list-item"><span class="circle"></span> ID Računa: <span>{{ racun.brojRacuna }}</span></div>
+            <div class="list-item"><span class="circle"></span> ID Narudžbe: <span>{{ racun.narudzbaID }}</span></div>
+            <div class="list-item"><span class="circle"></span> Datum i Vrijeme: <span>{{ racun.vrijemePlacanja | date:'yyyy-MM-dd HH:mm' }}</span></div>
+            <div class="list-item"><span class="circle"></span> Status: <span>{{ racun.statusNarudzbe }}</span></div>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Naziv</th>
+            <th>Količina</th>
+            <th>Jedin. Cijena</th>
+            <th>Ukupna Cijena</th>
+        </tr>
+        <tr *ngFor="let item of racun.stavkeRacuna; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ item.nazivArtikla }}</td>
+            <td>{{ item.kolicina }}</td>
+            <td>{{ item.cijena }} KM</td>
+            <td>{{ item.ukupno }} KM</td>
+        </tr>
+    </table>
+
+    <div class="total">
+        <div>Ukupno: {{ racun.ukupno }} KM</div>
+    </div>
+
+    <div class="divider"></div>
+    <button class="pay-btn" [routerLink]="['/placanje']">PLATI</button>
+</div>
+
+

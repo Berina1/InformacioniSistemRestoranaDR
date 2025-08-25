@@ -1,0 +1,50 @@
+using Microsoft.EntityFrameworkCore;
+using Restoran.BLL.Interfaces;
+using Restoran.BLL.Services;
+using Restoran.DAL.Data;
+using Restoran.DAL.Interfaces;
+using Restoran.DAL.Repositories;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Adding connection to the db
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Dependency Injection for Repositories
+builder.Services.AddScoped<IMeniRepository, MeniRepository>();
+builder.Services.AddScoped<INarudzbaRepository, NarudzbaRepository>();
+builder.Services.AddScoped<IRezervacijaRepository, RezervacijaRepository>();
+builder.Services.AddScoped<IRacunRepository, RacunRepository>();
+
+// Dependency Injection for Services
+builder.Services.AddScoped<IMeniService, MeniService>();
+builder.Services.AddScoped<INarudzbaService, NarudzbaService>();
+builder.Services.AddScoped<IRezervacijaService, RezervacijaService>();
+builder.Services.AddScoped<IRacunService, RacunService>();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+
+

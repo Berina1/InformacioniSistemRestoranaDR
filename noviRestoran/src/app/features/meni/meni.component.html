@@ -1,0 +1,158 @@
+<header>
+  <div class="header-container">
+    <h1 class="logo">
+      Palate <img src="assets/images/logo.png" alt="Logo" class="logo-image" /> Palace
+    </h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a routerLink="/pocetna" class="nav-link">Početna</a></li>
+        <li><a routerLink="/onama" class="nav-link">O Nama</a></li>
+        <li><a routerLink="/meni" class="nav-link">Meni</a></li>
+         <li *ngIf="roleService.isAdmin() || roleService.isKonobar()"> 
+          <a routerLink="/sveRezervacije" class="nav-link">Sve Rezervacije</a>
+        </li>
+
+        <li *ngIf="roleService.isAdmin() || roleService.isKonobar() || roleService.isKuhar()"> 
+          <a routerLink="/sveNarudzbe" class="nav-link">Sve Narudžbe</a>
+        </li>
+        
+        <li><a routerLink="/kontakt" class="nav-link">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="book-btn" [routerLink]="'/rezervacije'">Rezervacija</button>
+    <button class="logout-button" (click)="logout()">
+      <i class="fas fa-sign-out-alt"></i>
+    </button>
+  </div>
+</header>
+
+<div class="contact-container">
+  <div class="main-title">
+    <h1>MENI</h1>
+  </div>
+  <div class="sub-title">
+    <h2>
+      Pogledajte naš <span>Palate Palace meni</span>
+    </h2>
+  </div>
+  <section class="menu-layout">
+    <button class="order-btn" [routerLink]="'/kreirajNarudzbu'">
+      <i class="fas fa-shopping-cart"></i> Kreiraj narudžbu <i class="fas fa-hand-pointer"></i>
+    </button>
+    <section class="menu-layout">
+      <div class="menu-item">
+        <h2>Jelo</h2>
+        <hr class="menu-underline" />
+      </div>
+      <div class="menu-item">
+        <h2>Piće</h2>
+        <hr class="menu-underline" />
+      </div>
+    </section>
+  </section>
+
+  <section class="dishes-layout">
+    <h1>MENI</h1>
+    <div class="modal" *ngIf="isModalVisible" (click)="closeModal($event)">
+      <div class="modal-content">
+        <h3>Jeste li sigurni da želite obrisati proizvod?</h3>
+        <div class="modal-buttons">
+        <button class="confirm-btn" (click)="confirmDelete()">Potvrdi</button>
+        <button class="cancel-btn" (click)="closeModal()">Odustani</button>
+      </div>
+    </div>
+    </div>
+
+    <h2>JELA</h2>
+    <div id="dishes-row-food" class="dishes-row">
+      <div *ngFor="let item of foodItems" class="dish-card">
+        <div class="dish-image">
+          <img [src]="item.slika ? item.slika : 'img/default-icon.png'" alt="Dish Image" />
+        </div>
+        <h3>{{ item.naziv }}</h3>
+        <p class="description">{{ item.opis }}</p>
+        <p class="price">Cijena: {{ item.cijena }} KM</p>
+        <div class="button-container" *ngIf="roleService.isAdmin()">
+          <button (click)="editItem(item.meniID)" class="btn btn-edit"><i class="fas fa-pen"></i> Uredi</button>
+          <button (click)="confirmDeleteModal(item.meniID)" class="btn btn-delete">
+            <i class="fas fa-trash"></i> Obriši
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <h2>PIĆA</h2>
+    <div id="dishes-row-drinks" class="dishes-row">
+      <div *ngFor="let item of drinkItems" class="dish-card">
+        <div class="dish-image">
+          <img [src]="item.slika ? item.slika : 'img/default-icon.png'" alt="Dish Image" />
+        </div>
+        <h3>{{ item.naziv }}</h3>
+        <p class="description">{{ item.opis }}</p>
+        <p class="price">Cijena: {{ item.cijena }} KM</p>
+        <div class="button-container" *ngIf="roleService.isAdmin()">
+          <button (click)="editItem(item.meniID)" class="btn btn-edit"><i class="fas fa-pen"></i> Uredi</button>
+          <button (click)="confirmDeleteModal(item.meniID)" class="btn btn-delete">
+            <i class="fas fa-trash"></i> Obriši
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="horizontal-banner">
+    <div class="banner-content">
+      <button *ngIf="roleService.isAdmin()" class="add-btn" [routerLink]="'/dodaj-umeni'">+ Dodaj Jelo/Piće</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <div class="footer-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p class="footer-title">Lokacija</p>
+        </div>
+        <p>New York, NY 535022</p>
+        <p>A108 Mike Street</p>
+      </div>
+      <div class="footer-column">
+        <div class="footer-item">
+          <i class="fas fa-phone-alt"></i>
+          <p class="footer-title">Kontakt inf.</p>
+        </div>
+        <p>Tel: +1 5589 55488 55 </p>
+        <p>Email: palate-palace.com</p>
+      </div>
+      <div class="footer-column">
+        <div class="footer-item">
+          <i class="fas fa-clock"></i>
+          <p class="footer-title">Radno Vrijeme</p>
+        </div>
+        <p>Pon-Sub: 11:00h - 23:00h</p>
+        <p>Ned: Neradno</p>
+      </div>
+      <div class="footer-column">
+        <p class="footer-title">Pratite Nas</p>
+        <div class="social-icons">
+          <a href="https://twitter.com" class="social-icon" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com" class="social-icon" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com" class="social-icon" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.linkedin.com" class="social-icon" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 All rights reserved.</p>
+      <p>Designed by <span class="name">Berina Topalovic</span></p>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using Restoran.Models;
+
+namespace Restoran.DAL.Data
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+        public DbSet<Meni> Meni { get; set; }
+        public DbSet<Narudzba> Narudzbe { get; set; }
+        public DbSet<Rezervacija> Rezervacije { get; set; }
+        public DbSet<Racun> Racuni { get; set; }
+
+    }
+}

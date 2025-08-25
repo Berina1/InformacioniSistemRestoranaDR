@@ -1,0 +1,75 @@
+<button class="back-button" [routerLink]="'/meni'"> &#8592; Vrati se</button>
+
+<h1 class="logo">
+  Palate <img src="assets/images/logo.png" alt="Logo" class="logo-image"> Palace
+</h1>
+
+<div class="container">
+  <div id="register-form" class="form-container" style="display: block;">
+    <h2>Dodavanje jela/pića</h2>
+    <form id="addForm" (ngSubmit)="potvrdiFormu()">
+      <label for="name">Naziv jela/pića:</label>
+      <input
+        type="text"
+        id="name"
+        [(ngModel)]="name"
+        name="name"
+        placeholder="Unesite naziv jela ili pića koje želite dodati"
+        required
+      />
+
+      <label for="category">Kategorija:</label>
+      <select
+        id="category"
+        [(ngModel)]="category"
+        name="category"
+        required
+        style="width: 100%; padding: 10px; margin-bottom: 20px;"
+      >
+        <option value="" disabled selected>Odaberite kategoriju</option>
+        <option value="Jelo">Jelo</option>
+        <option value="Piće">Piće</option>
+      </select>
+
+      <label for="description">Opis kategorije:</label>
+      <input
+        type="text"
+        id="description"
+        [(ngModel)]="description"
+        name="description"
+        placeholder="Unesite opis kategorije koju ste odabrali"
+        required
+      />
+
+      <label for="price">Cijena:</label>
+      <input
+        type="number"
+        id="price"
+        [(ngModel)]="price"
+        name="price"
+        placeholder="Unesite cijenu proizvoda"
+        required
+      />
+
+      <label for="image">Dodaj sliku proizvoda:</label>
+      <input
+        type="text"
+        id="image"
+        [(ngModel)]="image"
+        name="image"
+        required
+      />
+
+      <div class="options">
+        <button type="submit" class="cancel-btn">
+          <i class="fas fa-check" style="color: white;"></i> Potvrdi
+        </button>
+        <button type="button" class="cancel-btn" (click)="ponistiFormu()">
+          <i class="fas fa-times" style="color: white;"></i> Poništi
+        </button>
+      </div>
+    </form>
+
+    <div *ngIf="message" [ngClass]="messageClass" id="message">{{ message }}</div>
+  </div>
+</div>

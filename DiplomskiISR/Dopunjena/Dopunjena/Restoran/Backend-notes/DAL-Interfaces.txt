@@ -1,0 +1,94 @@
+using Restoran.DTO;
+using Restoran.Models;
+
+namespace Restoran.DAL.Interfaces
+{
+    public interface IMeniRepository
+    {
+        Task AddMeniAsync(Meni meni);
+        Task<List<Meni>> GetMeniAsync();
+
+        Task<Meni> GetMeniByIdAsync(int id);
+
+        Task UpdateMeniAsync(Meni meni);
+
+        Task DeleteMeniAsync(Meni meni);
+
+    }
+}
+
+
+using Restoran.Models;
+using Restoran.DTO;
+using Restoran.DAL.Interfaces;
+
+namespace Restoran.DAL.Interfaces
+{
+    public interface INarudzbaRepository
+    {
+        Task AddNarudzbaAsync(Narudzba narudzba);
+        Task<List<Narudzba>> GetNarudzbaAsync();
+
+        Task<Narudzba> GetNarudzbaByIdAsync(int id);
+
+        Task UpdateNarudzbaAsync(Narudzba narudzba);
+
+        Task DeleteNarudzbaAsync(Narudzba narudzba);
+    }
+}
+
+
+    
+ 
+using Restoran.Models;
+using Restoran.DTO;
+using Restoran.DAL.Interfaces;
+
+namespace Restoran.DAL.Interfaces
+{
+    public interface IRacunRepository
+    {
+        Task AddRacunAsync(Racun racun);
+
+        Task<List<Racun>> GetRacunAsync();
+
+        Task<Racun> GetRacunByIdAsync(int id);
+
+        Task UpdateRacunAsync(Racun racun);
+
+        Task DeleteRacunAsync(Racun racun);
+    }
+}
+
+
+
+using Restoran.Models;
+using Restoran.DTO;
+using Restoran.DAL.Interfaces;
+
+namespace Restoran.DAL.Interfaces
+{
+    public interface IRezervacijaRepository
+    {
+        Task AddRezervacijaAsync(Rezervacija rezervacija);
+
+        Task<List<Rezervacija>> GetRezervacijaAsync();
+
+        Task<Rezervacija> GetRezervacijaByIdAsync(int id);
+
+        Task UpdateRezervacijaAsync(Rezervacija rezervacija);
+
+        Task DeleteRezervacijaAsync(Rezervacija rezervacija);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

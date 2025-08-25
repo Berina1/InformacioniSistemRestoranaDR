@@ -1,0 +1,265 @@
+using Microsoft.AspNetCore.Mvc;
+using Restoran.BLL.Interfaces;
+using Restoran.DTO;
+
+namespace Restoran.API.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class MeniController : ControllerBase
+    {
+        private readonly IMeniService _meniService;
+
+        public MeniController(IMeniService meniService)
+        {
+            _meniService = meniService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetMeni()
+        {
+            var meni = await _meniService.GetMeniAsync();
+            return Ok(meni);
+        }
+        //Berina kod
+        [HttpPost]
+        public async Task<IActionResult> AddMeni([FromBody] MeniDTO meni)
+        {
+            if (meni == null)
+                return BadRequest("Nepostojeci podatak.");
+
+            await _meniService.AddMeniAsync(meni);
+
+            // Return 200 OK with the added meni object
+            return Ok(meni); // This returns a 200 OK status with the "meni" object
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateMeni(int id, [FromBody] MeniDTO meni)
+        {
+            if (meni == null)
+                return BadRequest("Nepostojeci podatak.");
+
+            var updatedMeni = await _meniService.UpdateMeniAsync(id, meni);
+
+            if (updatedMeni == null)
+                return NotFound($"Meni with ID {id} not found.");
+
+            return Ok(updatedMeni);
+        }
+
+        [HttpDelete("{id}")]
+
+        public async Task<IActionResult> DeleteMeni(int id)
+        {
+            var isDeleted = await _meniService.DeleteMeniAsync(id);
+
+            if(!isDeleted)
+            {
+                return NotFound($"Meni with ID {id} not found.");
+            }
+            return Ok($"Meni with ID {id} deleted successfully.");
+        }
+    }
+}
+
+ 
+
+using Microsoft.AspNetCore.Mvc;
+using Restoran.BLL.Interfaces;
+using Restoran.DTO;
+
+namespace Restoran.API.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class NarudzbaController : ControllerBase
+    {
+        private readonly INarudzbaService _narudzbaService;
+
+        public NarudzbaController(INarudzbaService narudzbaService)
+        {
+            _narudzbaService = narudzbaService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetNarudzba()
+        {
+            var narudzba = await _narudzbaService.GetNarudzbaAsync();
+            return Ok(narudzba);
+        }
+      
+        [HttpPost]
+        public async Task<IActionResult> AddNarudzba([FromBody] NarudzbaDTO narudzba)
+        {
+            if (narudzba == null)
+                return BadRequest("Nepostojeci podatak.");
+
+            await _narudzbaService.AddNarudzbaAsync(narudzba);
+
+            return Ok(narudzba); 
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateNarudzba(int id, [FromBody] NarudzbaDTO narudzba)
+        {
+            if (narudzba == null)
+                return BadRequest("Nepostojeci podatak.");
+
+            var updatedNarudzba = await _narudzbaService.UpdateNarudzbaAsync(id, narudzba);
+
+            if (updatedNarudzba == null)
+                return NotFound($"Narudzba with ID {id} not found.");
+
+            return Ok(updatedNarudzba);
+        }
+
+        [HttpDelete("{id}")]
+
+        public async Task<IActionResult> DeleteNarudzba(int id)
+        {
+            var isDeleted = await _narudzbaService.DeleteNarudzbaAsync(id);
+
+            if (!isDeleted)
+            {
+                return NotFound($"Narudzba with ID {id} not found.");
+            }
+            return Ok($"Narudzba with ID {id} deleted successfully.");
+        }
+    }
+}
+
+
+
+using Microsoft.AspNetCore.Mvc;
+using Restoran.BLL.Interfaces;
+using Restoran.DTO;
+
+namespace Restoran.API.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class RacunController : ControllerBase
+    {
+        private readonly IRacunService _racunService;
+
+        public RacunController(IRacunService racunService)
+        {
+            _racunService = racunService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetRacun()
+        {
+            var racun = await _racunService.GetRacunAsync();
+            return Ok(racun);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddRacun([FromBody] RacunDTO racun)
+        {
+            if (racun == null)
+                return BadRequest("Nepostojeci podatak.");
+
+            await _racunService.AddRacunAsync(racun);
+
+            return Ok(racun);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateRacun(int id, [FromBody] RacunDTO racun)
+        {
+            if (racun == null)
+                return BadRequest("Nepostojeci podatak.");
+
+            var updatedRacun = await _racunService.UpdateRacunAsync(id, racun);
+
+            if (updatedRacun == null)
+                return NotFound($"Rezervacija with ID {id} not found.");
+
+            return Ok(updatedRacun);
+        }
+
+        [HttpDelete("{id}")]
+
+        public async Task<IActionResult> DeleteRacun(int id)
+        {
+            var isDeleted = await _racunService.DeleteRacunAsync(id);
+
+            if (!isDeleted)
+            {
+                return NotFound($"Racun with ID {id} not found.");
+            }
+            return Ok($"Racun with ID {id} deleted successfully.");
+        }
+    }
+}
+
+
+
+
+using Microsoft.AspNetCore.Mvc;
+using Restoran.BLL.Interfaces;
+using Restoran.DTO;
+
+namespace Restoran.API.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class RezervacijaController : ControllerBase
+    {
+        private readonly IRezervacijaService _rezervacijaService;
+
+        public RezervacijaController(IRezervacijaService rezervacijaService)
+        {
+            _rezervacijaService = rezervacijaService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetRezervacija()
+        {
+            var rezervacija = await _rezervacijaService.GetRezervacijaAsync();
+            return Ok(rezervacija);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddRezervacija([FromBody] RezervacijaDTO rezervacija)
+        {
+            if (rezervacija == null)
+                return BadRequest("Nepostojeci podatak.");
+
+            await _rezervacijaService.AddRezervacijaAsync(rezervacija);
+
+            return Ok(rezervacija);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateRezervacija(int id, [FromBody] RezervacijaDTO rezervacija)
+        {
+            if (rezervacija == null)
+                return BadRequest("Nepostojeci podatak.");
+
+            var updatedRezervacija = await _rezervacijaService.UpdateRezervacijaAsync(id, rezervacija);
+
+            if (updatedRezervacija == null)
+                return NotFound($"Rezervacija with ID {id} not found.");
+
+            return Ok(updatedRezervacija);
+        }
+
+        [HttpDelete("{id}")]
+
+        public async Task<IActionResult> DeleteRezervacija(int id)
+        {
+            var isDeleted = await _rezervacijaService.DeleteRezervacijaAsync(id);
+
+            if (!isDeleted)
+            {
+                return NotFound($"Rezervacija with ID {id} not found.");
+            }
+            return Ok($"Rezervacija with ID {id} deleted successfully.");
+        }
+    }
+}
+
+
+

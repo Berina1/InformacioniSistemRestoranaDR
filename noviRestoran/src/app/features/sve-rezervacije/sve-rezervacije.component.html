@@ -1,0 +1,32 @@
+<table id="reservations-table">
+  <thead>
+    <tr>
+      <th>Rezervacija ID</th>
+      <th>Sto</th>
+      <th>Rezervisao/la</th>
+      <th>Vrijeme Rezervacije</th>
+      <th>Kontakt Broj</th>
+      <!--<th>Status</th>-->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let reservation of reservations">
+      <td>{{ reservation.rezervacijaID }}</td>
+      <td>{{ getTableDisplay(reservation.stoID) }}</td>
+
+      <td>{{ reservation.rezervisanoOd }}</td>
+      <td>{{ reservation.vrijemeRezervacije | date: 'short' }}</td>
+      <td>{{ reservation.kontaktBroj }}</td>
+      <!-- <td>
+        <select [(ngModel)]="reservation.status"
+        (change)="updateReservationStatus(reservation)">
+
+            <option value="Na cekanju">Na čekanju</option>
+            <option value="Potvrdeno">Potvrđeno</option>
+            <option value="Otkazano">Otkazano</option>
+          </select>
+        </td>-->
+    </tr>
+  </tbody>
+</table>
+<button class="back-button" (click)="goBack()"> &#8592; Vrati se</button>

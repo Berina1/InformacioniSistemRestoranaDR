@@ -1,0 +1,126 @@
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;  
+    border-radius: 30px; 
+    background-color: #ce1212; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.back-button:hover {
+    background-color: darkred; 
+}
+
+.logo {
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px; 
+    font-weight: lighter;
+    letter-spacing: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px; 
+}
+
+.logo-image {
+    width: 50px; 
+    height: auto;  
+    margin-left: -5px;
+    margin-top: 5px;
+
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    background: #f4f4f4;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto 0 auto; 
+}
+
+.form-container {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+    display: block;
+}
+
+h2, ul, li, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-family: 'Amatic SC', cursive;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+    padding: 5px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select, input {
+    display: block; 
+    margin-bottom: 15px; 
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ce1212;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+.options button {
+    width: 45%; 
+}
+
+.form-container button {
+    text-align: right; 
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;  
+    margin-top: 20px;
+}
+
+.options a {
+    color: #3D000F;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+    background-color: #9C262F;
+}
+
+.form-container form {
+    display: block; 
+    text-align: left; 
+}
+
+

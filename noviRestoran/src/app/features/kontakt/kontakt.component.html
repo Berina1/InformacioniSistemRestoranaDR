@@ -1,0 +1,139 @@
+<header>
+  <div class="header-container">
+    <h1 class="logo">
+      Palate <img src="assets/images/logo.png" alt="Logo" class="logo-image"> Palace
+    </h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a routerLink="/pocetna" class="nav-link">Početna</a></li>
+        <li><a routerLink="/onama" class="nav-link">O Nama</a></li>
+        <li><a routerLink="/meni" class="nav-link">Meni</a></li>
+
+        <li *ngIf="roleService.isAdmin() || roleService.isKonobar()">
+          <a routerLink="/sveRezervacije">Sve Rezervacije</a>
+        </li>
+
+        <li *ngIf="roleService.isAdmin() || roleService.isKonobar() || roleService.isKuhar()">
+          <a routerLink="/sveNarudzbe">Sve Narudžbe</a>
+        </li>
+
+        <li><a routerLink="/kontakt" class="nav-link">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="book-btn" [routerLink]="'/rezervacije'">Rezervacija</button>
+    <button class="logout-button" (click)="logout()">
+      <i class="fas fa-sign-out-alt"></i>
+    </button>
+  </div>
+</header>
+
+<div class="contact-container">
+  <div class="main-title">
+    <h1>KONTAKT</h1>
+  </div>
+  <div class="sub-title">
+    <h2>Trebate pomoć? <span>Obratite nam se</span></h2>
+  </div>
+
+  <div class="map-container">
+    <iframe class="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.007305899194!2d-74.0061377!3d40.7100586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown.%20Conference%20Center!5e0!3m2!1sen!2sus!4v1678345748312!5m2!1sen!2sus"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <section class="contact-layout">
+    <div class="contact-box">
+      <div class="left-column">
+        <div class="contact-item">
+          <div class="icon-container">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="text-container">
+            <p class="contact-title">Lokacija</p>
+            <p>A108 Mike Street, New York, NY 535022</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon-container">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="text-container">
+            <p class="contact-title">Email</p>
+            <p>palate-palace.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-column">
+        <div class="contact-item">
+          <div class="icon-container">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div class="text-container">
+            <p class="contact-title">Telefon</p>
+            <p>+1 234 567 890</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon-container">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="text-container">
+            <p class="contact-title">Radno Vrijeme</p>
+            <p>Pon-Sub, 11:00h - 23:00h</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <div class="footer-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <p class="footer-title">Lokacija</p>
+      </div>
+      <p>New York, NY 535022</p>
+      <p>A108 Mike Street</p>
+    </div>
+    <div class="footer-column">
+      <div class="footer-item">
+        <i class="fas fa-phone-alt"></i>
+        <p class="footer-title">Kontakt inf.</p>
+      </div>
+      <p>Tel: +1 5589 55488 55 </p>
+      <p>Email: palate-palace.com</p>
+    </div>
+    <div class="footer-column">
+      <div class="footer-item">
+        <i class="fas fa-clock"></i>
+        <p class="footer-title">Radno Vrijeme</p>
+      </div>
+      <p>Pon-Sub: 11:00h - 23:00h</p>
+      <p>Ned: Neradno</p>
+    </div>
+    <div class="footer-column">
+      <p class="footer-title">Pratite Nas</p>
+      <div class="social-icons">
+        <a href="https://twitter.com" class="social-icon" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" class="social-icon" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com" class="social-icon" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.linkedin.com" class="social-icon" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 All rights reserved.</p>
+    <p>Designed by <span class="name">Berina Topalovic</span></p>
+  </div>
+</footer>

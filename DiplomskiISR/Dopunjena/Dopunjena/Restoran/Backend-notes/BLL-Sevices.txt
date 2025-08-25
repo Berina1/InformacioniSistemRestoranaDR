@@ -1,0 +1,340 @@
+using Restoran.BLL.Interfaces;
+using Restoran.DAL.Interfaces;
+using Restoran.DTO;
+using Restoran.Models;
+
+namespace Restoran.BLL.Services
+{
+    public class MeniService : IMeniService
+    {
+        private readonly IMeniRepository _meniRepository;
+
+        public MeniService(IMeniRepository meniRepository)
+        {
+            _meniRepository = meniRepository;
+        }
+
+        public async Task<List<MeniDTO>> GetMeniAsync()
+        {
+            var meni = await _meniRepository.GetMeniAsync();
+            return meni.Select(meni => new MeniDTO
+            {
+                MeniID = meni.MeniID,
+                Naziv = meni.Naziv,
+                Kategorija = meni.Kategorija,
+                Cijena = meni.Cijena,
+                Opis = meni.Opis,
+            }).ToList();
+        }
+        //Berina kod
+
+        public async Task AddMeniAsync(MeniDTO meniDTO)
+        {
+            // Manually map MeniDTO to Meni model
+            var meni = new Meni
+            {
+                Naziv = meniDTO.Naziv,
+                Kategorija = meniDTO.Kategorija,
+                Cijena = meniDTO.Cijena,
+                Opis = meniDTO.Opis
+            };
+
+            // Call the repository to add the Meni object
+            await _meniRepository.AddMeniAsync(meni);
+        }
+
+        public async Task<MeniDTO> UpdateMeniAsync(int id, MeniDTO meniDto)
+        {
+            var existingMeni = await _meniRepository.GetMeniByIdAsync(id);
+
+            if (existingMeni == null)
+                return null;
+
+            existingMeni.Naziv = meniDto.Naziv;
+            existingMeni.Kategorija = meniDto.Kategorija;
+            existingMeni.Cijena = meniDto.Cijena;
+            existingMeni.Opis = meniDto.Opis;
+
+            await _meniRepository.UpdateMeniAsync(existingMeni);
+
+            var updatedMeniDto = new MeniDTO
+            {
+                MeniID = existingMeni.MeniID,
+                Naziv = existingMeni.Naziv,
+                Kategorija = existingMeni.Kategorija,
+                Cijena = existingMeni.Cijena,
+                Opis = existingMeni.Opis
+            };
+
+            return updatedMeniDto;
+        }
+
+        public async Task<bool> DeleteMeniAsync(int id)
+        {
+            var meni = await _meniRepository.GetMeniByIdAsync(id);
+
+            if(meni==null)
+            {
+                return false;
+            }
+            await _meniRepository.DeleteMeniAsync(meni);
+            return true;
+        }
+    }
+}
+
+
+
+using Restoran.BLL.Interfaces;
+using Restoran.DAL.Interfaces;
+using Restoran.DTO;
+using Restoran.Models;
+
+namespace Restoran.BLL.Services
+{
+    public class NarudzbaService : INarudzbaService
+    {
+        private readonly INarudzbaRepository _narudzbaRepository;
+
+        public NarudzbaService(INarudzbaRepository narudzbaRepository)
+        {
+            _narudzbaRepository = narudzbaRepository;
+        }
+
+        public async Task<List<NarudzbaDTO>> GetNarudzbaAsync()
+        {
+            var narudzba = await _narudzbaRepository.GetNarudzbaAsync();
+            return narudzba.Select(narudzba => new NarudzbaDTO
+            {
+                NarudzbaID = narudzba.NarudzbaID,
+                StoID = narudzba.StoID,
+                KorisnikID = narudzba.KorisnikID,
+                VrijemeNarudzbe = narudzba.VrijemeNarudzbe,
+                Status = narudzba.Status,
+            }).ToList();
+        }
+        public async Task AddNarudzbaAsync(NarudzbaDTO narudzbaDTO)
+        {
+           var narudzba = new Narudzba
+            {
+                StoID = narudzbaDTO.StoID,
+                KorisnikID = narudzbaDTO.KorisnikID,
+                VrijemeNarudzbe = narudzbaDTO.VrijemeNarudzbe,
+                Status = narudzbaDTO.Status
+            };
+
+            await _narudzbaRepository.AddNarudzbaAsync(narudzba);
+        }
+
+        public async Task<NarudzbaDTO> UpdateNarudzbaAsync(int id, NarudzbaDTO narudzbaDto)
+        {
+            var existingNarudzba = await _narudzbaRepository.GetNarudzbaByIdAsync(id);
+
+            if (existingNarudzba == null)
+                return null;
+
+            existingNarudzba.StoID = narudzbaDto.StoID;
+            existingNarudzba.KorisnikID = narudzbaDto.KorisnikID;
+            existingNarudzba.VrijemeNarudzbe = narudzbaDto.VrijemeNarudzbe;
+            existingNarudzba.Status = narudzbaDto.Status;
+
+            await _narudzbaRepository.UpdateNarudzbaAsync(existingNarudzba);
+
+            var updatedNarudzbaDto = new NarudzbaDTO
+            {
+                NarudzbaID = existingNarudzba.NarudzbaID,
+                StoID = existingNarudzba.StoID,
+                KorisnikID = existingNarudzba.KorisnikID,
+                VrijemeNarudzbe = existingNarudzba.VrijemeNarudzbe,
+                Status = existingNarudzba.Status
+            };
+
+            return updatedNarudzbaDto;
+        }
+
+        public async Task<bool> DeleteNarudzbaAsync(int id)
+        {
+            var narudzba = await _narudzbaRepository.GetNarudzbaByIdAsync(id);
+
+            if (narudzba == null)
+            {
+                return false;
+            }
+            await _narudzbaRepository.DeleteNarudzbaAsync(narudzba);
+            return true;
+        }
+    }
+}
+
+
+
+
+using Restoran.BLL.Interfaces;
+using Restoran.DAL.Interfaces;
+using Restoran.DAL.Repositories;
+using Restoran.DTO;
+using Restoran.Models;
+
+namespace Restoran.BLL.Services
+{
+    public class RacunService : IRacunService
+    {
+        private readonly IRacunRepository _racunRepository;
+
+        public RacunService(IRacunRepository racunRepository)
+        {
+            _racunRepository = racunRepository;
+        }
+
+        public async Task<List<RacunDTO>> GetRacunAsync()
+        {
+            var racun = await _racunRepository.GetRacunAsync();
+            return racun.Select(racun => new RacunDTO
+            {
+                RacunID = racun.RacunID,
+                NarudzbaID = racun.NarudzbaID,
+                Ukupno = racun.Ukupno,
+                NacinPlacanja = racun.NacinPlacanja,
+                VrijemePlacanja = racun.VrijemePlacanja,
+            }).ToList();
+        }
+        public async Task AddRacunAsync(RacunDTO racunDTO)
+        {
+            var racun = new Racun
+            {
+                NarudzbaID = racunDTO.NarudzbaID,
+                Ukupno = racunDTO.Ukupno,
+                NacinPlacanja = racunDTO.NacinPlacanja,
+                VrijemePlacanja = racunDTO.VrijemePlacanja,
+            };
+
+            await _racunRepository.AddRacunAsync(racun);
+        }
+
+        public async Task<RacunDTO> UpdateRacunAsync(int id, RacunDTO racunDto)
+        {
+            var existingRacun = await _racunRepository.GetRacunByIdAsync(id);
+
+            if (existingRacun == null)
+                return null;
+
+            existingRacun.NarudzbaID = racunDto.NarudzbaID;
+            existingRacun.Ukupno = racunDto.Ukupno;
+            existingRacun.NacinPlacanja = racunDto.NacinPlacanja;
+            existingRacun.VrijemePlacanja = racunDto.VrijemePlacanja;
+
+            await _racunRepository.UpdateRacunAsync(existingRacun);
+
+            var updatedRacunDto = new RacunDTO
+            {
+                RacunID = existingRacun.RacunID,
+                NarudzbaID = existingRacun.NarudzbaID,
+                Ukupno = existingRacun.Ukupno,
+                NacinPlacanja = existingRacun.NacinPlacanja,
+            };
+
+            return updatedRacunDto;
+        }
+
+        public async Task<bool> DeleteRacunAsync(int id)
+        {
+            var racun = await _racunRepository.GetRacunByIdAsync(id);
+
+            if (racun == null)
+            {
+                return false;
+            }
+            await _racunRepository.DeleteRacunAsync(racun);
+            return true;
+        }
+    }
+}
+
+
+
+
+using Restoran.BLL.Interfaces;
+using Restoran.DAL.Interfaces;
+using Restoran.DTO;
+using Restoran.Models;
+
+namespace Restoran.BLL.Services
+{
+    public class RezervacijaService : IRezervacijaService
+    {
+        private readonly IRezervacijaRepository _rezervacijaRepository;
+
+        public RezervacijaService(IRezervacijaRepository rezervacijaRepository)
+        {
+            _rezervacijaRepository = rezervacijaRepository;
+        }
+
+        public async Task<List<RezervacijaDTO>> GetRezervacijaAsync()
+        {
+            var rezervacija = await _rezervacijaRepository.GetRezervacijaAsync();
+            return rezervacija.Select(rezervacija => new RezervacijaDTO
+            {
+                RezervacijaID = rezervacija.RezervacijaID,
+                StoID = rezervacija.StoID,
+                RezervisanoOd = rezervacija.RezervisanoOd,
+                VrijemeRezervacije = rezervacija.VrijemeRezervacije,
+                KontaktBroj = rezervacija.KontaktBroj,
+                Status = rezervacija.Status,
+            }).ToList();
+        }
+        public async Task AddRezervacijaAsync(RezervacijaDTO rezervacijaDTO)
+        {
+            var rezervacija = new Rezervacija
+            {
+                StoID = rezervacijaDTO.StoID,
+                RezervisanoOd = rezervacijaDTO.RezervisanoOd,
+                VrijemeRezervacije = rezervacijaDTO.VrijemeRezervacije,
+                KontaktBroj = rezervacijaDTO.KontaktBroj,
+                Status = rezervacijaDTO.Status
+            };
+
+            await _rezervacijaRepository.AddRezervacijaAsync(rezervacija);
+        }
+
+        public async Task<RezervacijaDTO> UpdateRezervacijaAsync(int id, RezervacijaDTO rezervacijaDto)
+        {
+            var existingRezervacija = await _rezervacijaRepository.GetRezervacijaByIdAsync(id);
+
+            if (existingRezervacija == null)
+                return null;
+
+            existingRezervacija.StoID = rezervacijaDto.StoID;
+            existingRezervacija.RezervisanoOd = rezervacijaDto.RezervisanoOd;
+            existingRezervacija.VrijemeRezervacije = rezervacijaDto.VrijemeRezervacije;
+            existingRezervacija.KontaktBroj = rezervacijaDto.KontaktBroj;
+            existingRezervacija.Status = rezervacijaDto.Status;
+
+            await _rezervacijaRepository.UpdateRezervacijaAsync(existingRezervacija);
+
+            var updatedRezervacijaDto = new RezervacijaDTO
+            {
+                RezervacijaID = existingRezervacija.RezervacijaID,
+                StoID = existingRezervacija.StoID,
+                RezervisanoOd = existingRezervacija.RezervisanoOd,
+                VrijemeRezervacije = existingRezervacija.VrijemeRezervacije,
+                KontaktBroj=existingRezervacija.KontaktBroj,
+                Status = existingRezervacija.Status
+            };
+
+            return updatedRezervacijaDto;
+        }
+
+        public async Task<bool> DeleteRezervacijaAsync(int id)
+        {
+            var rezervacija = await _rezervacijaRepository.GetRezervacijaByIdAsync(id);
+
+            if (rezervacija == null)
+            {
+                return false;
+            }
+            await _rezervacijaRepository.DeleteRezervacijaAsync(rezervacija);
+            return true;
+        }
+    }
+}
+

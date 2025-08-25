@@ -1,0 +1,18 @@
+﻿# VS/Visual Studio
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Local app settings
+appsettings.Development.json
+
+# Node / Angular
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+.angular/

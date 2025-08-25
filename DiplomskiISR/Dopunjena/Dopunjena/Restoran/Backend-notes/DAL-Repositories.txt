@@ -1,0 +1,212 @@
+using Microsoft.EntityFrameworkCore;
+using Restoran.DAL.Data;
+using Restoran.DAL.Interfaces;
+using Restoran.Models;
+
+namespace Restoran.DAL.Repositories
+{
+    public class MeniRepository : IMeniRepository
+    {    
+        private readonly ApplicationDbContext _context;
+
+        public MeniRepository(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<List<Meni>> GetMeniAsync()
+        {
+            return await _context.Meni.ToListAsync();
+        }
+
+        //Berina kod
+        public async Task AddMeniAsync (Meni meni)
+        {
+            await _context.Meni.AddAsync(meni);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<Meni> GetMeniByIdAsync(int id)
+        {
+            var meni = await _context.Meni.FirstOrDefaultAsync(m => m.MeniID == id);
+            if (meni == null)
+            {
+                return null;
+            }
+            return meni;
+        }
+
+        public async Task UpdateMeniAsync(Meni meni)
+        {
+            _context.Meni.Update(meni);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteMeniAsync(Meni meni)
+        {
+            _context.Meni.Remove(meni);
+            await _context.SaveChangesAsync();
+        }
+    }
+}
+
+
+
+using Restoran.DAL.Data;
+using Restoran.DAL.Interfaces;
+using Restoran.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace Restoran.DAL.Repositories
+{
+    public class NarudzbaRepository : INarudzbaRepository
+    {
+        private readonly ApplicationDbContext _context;
+        public NarudzbaRepository(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+        public async Task<List<Narudzba>> GetNarudzbaAsync()
+        {
+            return await _context.Narudzbe.ToListAsync();
+        }
+
+        public async Task AddNarudzbaAsync(Narudzba narudzba)
+        {
+            await _context.Narudzbe.AddAsync(narudzba);
+            await _context.SaveChangesAsync();
+        }
+        public async Task<Narudzba> GetNarudzbaByIdAsync(int id)
+        {
+            var narudzba = await _context.Narudzbe.FirstOrDefaultAsync(m => m.NarudzbaID == id);
+            if (narudzba == null)
+            {
+                return null;
+            }
+            return narudzba;
+        }
+        public async Task UpdateNarudzbaAsync(Narudzba narudzba)
+        {
+            _context.Narudzbe.Update(narudzba);
+            await _context.SaveChangesAsync();
+        }
+        public async Task DeleteNarudzbaAsync(Narudzba narudzba)
+        {
+            _context.Narudzbe.Remove(narudzba);
+            await _context.SaveChangesAsync();
+        }
+    }
+}
+
+
+
+
+using Restoran.DAL.Data;
+using Restoran.DAL.Interfaces;
+using Restoran.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace Restoran.DAL.Repositories
+{
+    public class RacunRepository : IRacunRepository
+    {
+        private readonly ApplicationDbContext _context;
+        public RacunRepository(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+        public async Task<List<Racun>> GetRacunAsync()
+        {
+            return await _context.Racuni.ToListAsync();
+        }
+
+        public async Task AddRacunAsync(Racun racun)
+        {
+            await _context.Racuni.AddAsync(racun);
+            await _context.SaveChangesAsync();
+        }
+        public async Task<Racun> GetRacunByIdAsync(int id)
+        {
+            var racun = await _context.Racuni.FirstOrDefaultAsync(m => m.RacunID == id);
+            if (racun == null)
+            {
+                return null;
+            }
+            return racun;
+        }
+        public async Task UpdateRacunAsync(Racun racun)
+        {
+            _context.Racuni.Update(racun);
+            await _context.SaveChangesAsync();
+        }
+        public async Task DeleteRacunAsync(Racun racun)
+        {
+            _context.Racuni.Remove(racun);
+            await _context.SaveChangesAsync();
+        }
+    }
+}
+
+
+
+
+using Restoran.DAL.Data;
+using Restoran.DAL.Interfaces;
+using Restoran.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace Restoran.DAL.Repositories
+{
+    public class RezervacijaRepository : IRezervacijaRepository
+    {
+        private readonly ApplicationDbContext _context;
+        public RezervacijaRepository(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+        public async Task<List<Rezervacija>> GetRezervacijaAsync()
+        {
+            return await _context.Rezervacije.ToListAsync();
+        }
+
+        public async Task AddRezervacijaAsync(Rezervacija rezervacija)
+        {
+            await _context.Rezervacije.AddAsync(rezervacija);
+            await _context.SaveChangesAsync();
+        }
+        public async Task<Rezervacija> GetRezervacijaByIdAsync(int id)
+        {
+            var rezervacija = await _context.Rezervacije.FirstOrDefaultAsync(m => m.RezervacijaID == id);
+            if (rezervacija == null)
+            {
+                return null;
+            }
+            return rezervacija;
+        }
+        public async Task UpdateRezervacijaAsync(Rezervacija rezervacija)
+        {
+            _context.Rezervacije.Update(rezervacija);
+            await _context.SaveChangesAsync();
+        }
+        public async Task DeleteRezervacijaAsync(Rezervacija rezervacija)
+        {
+            _context.Rezervacije.Remove(rezervacija);
+            await _context.SaveChangesAsync();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

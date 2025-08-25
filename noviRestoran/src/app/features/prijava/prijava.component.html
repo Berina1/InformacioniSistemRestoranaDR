@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="bs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Forma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="icon">
+                <i class="fas fa-user"></i>
+            </div>
+            <p>Nemate račun? <a routerLink="/registracija">Registrujte se</a></p>
+        </div>
+        <div class="right-panel">
+            <h2>Prijava Korisnika</h2>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="input-group">
+                    <span class="icon"><i class="fas fa-envelope"></i></span>
+                    <input type="email" formControlName="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <span class="icon"><i class="fas fa-key"></i></span>
+                    <input type="password" formControlName="lozinka" placeholder="Šifra" required>
+                </div>
+                <button type="submit" class="login-btn" [disabled]="loginForm.invalid">PRIJAVI SE</button>
+            </form>
+            <p *ngIf="successMessage" class="success">{{successMessage}} </p>
+        </div>
+    </div>
+</body>
+
+</html>

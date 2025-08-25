@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    width: 650px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+    background-color: #ce1212;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3); 
+}
+
+.left-panel {
+    background: linear-gradient(to right, #ce1212, #9C262F);
+    color: white;
+    text-align: center;
+    width: 65%;  
+    padding: 50px;
+    margin-left: -15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;  
+}
+
+.left-panel .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px; 
+    height: 110px; 
+    border-radius: 50%;
+    background-color: white; 
+    margin-left: -40px; 
+    margin-bottom: 20px; 
+    color: #ce1212; 
+    font-size: 70px;
+}
+
+.left-panel .icon i {
+    margin: 0;
+}
+
+.left-panel a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.right-panel {
+    width: 40%;  
+    background: white;
+    padding: 30px;
+    text-align: center;
+    position: relative;  
+    margin-left: -10%; 
+    z-index: 2;  
+}
+
+.right-panel h2 {
+    margin-bottom: 20px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f4f4f4;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.input-group .icon {
+    margin-right: 10px;
+   color: #333;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+}
+
+.login-btn {
+    width: 100%;
+    background: #ce1212;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.login-btn:hover {
+    background: #9C262F;
+}
+
+.right-panel p a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #9C262F;
+}
