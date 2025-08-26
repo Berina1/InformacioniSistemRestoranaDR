@@ -3,56 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\restoran.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\restoran.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\api\\controllers\\korisnicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\api\\controllers\\korisnicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\bll\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\bll\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\dto\\rezervacijadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\dto\\rezervacijadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\bll\\services\\rezervacijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\bll\\services\\rezervacijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\dto\\menidto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\dto\\menidto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\api\\controllers\\rezervacijacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\api\\controllers\\rezervacijacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\api\\controllers\\placanjecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\api\\controllers\\placanjecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\api\\controllers\\narudzbacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\api\\controllers\\narudzbacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\api\\controllers\\menicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\api\\controllers\\menicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\bll\\services\\meniservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\bll\\services\\meniservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|c:\\users\\user\\onedrive\\desktop\\noviangularprojekat\\diplomskiisr\\dopunjena\\dopunjena\\restoran\\restoran\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{952D2E9B-DB80-4DB3-84F5-AFC1EAD1304F}|Restoran\\Restoran.csproj|solutionrelative:restoran\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,161 +30,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Restoran",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\Restoran.csproj",
-              "RelativeDocumentMoniker": "Restoran\\Restoran.csproj",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\Restoran.csproj",
-              "RelativeToolTip": "Restoran\\Restoran.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-21T09:55:00.429Z",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Restoran\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\appsettings.Development.json",
+              "RelativeToolTip": "Restoran\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-25T07:52:48.404Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\.gitignore",
+              "RelativeDocumentMoniker": "Restoran\\.gitignore",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\.gitignore",
+              "RelativeToolTip": "Restoran\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-25T07:45:50.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\appsettings.json",
               "RelativeDocumentMoniker": "Restoran\\appsettings.json",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\appsettings.json",
               "RelativeToolTip": "Restoran\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-08-21T09:41:53.337Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\Program.cs",
-              "RelativeDocumentMoniker": "Restoran\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\Program.cs",
-              "RelativeToolTip": "Restoran\\Program.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAADkAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T17:46:49.818Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RezervacijaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\DTO\\RezervacijaDTO.cs",
-              "RelativeDocumentMoniker": "Restoran\\DTO\\RezervacijaDTO.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\DTO\\RezervacijaDTO.cs",
-              "RelativeToolTip": "Restoran\\DTO\\RezervacijaDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T17:46:30.378Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RezervacijaService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\BLL\\Services\\RezervacijaService.cs",
-              "RelativeDocumentMoniker": "Restoran\\BLL\\Services\\RezervacijaService.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\BLL\\Services\\RezervacijaService.cs",
-              "RelativeToolTip": "Restoran\\BLL\\Services\\RezervacijaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T17:46:19.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\BLL\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "Restoran\\BLL\\Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\BLL\\Services\\EmailService.cs",
-              "RelativeToolTip": "Restoran\\BLL\\Services\\EmailService.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwDIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T17:45:55.881Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MeniDTO.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\DTO\\MeniDTO.cs",
-              "RelativeDocumentMoniker": "Restoran\\DTO\\MeniDTO.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\DTO\\MeniDTO.cs",
-              "RelativeToolTip": "Restoran\\DTO\\MeniDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T16:38:54.302Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RezervacijaController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\API\\Controllers\\RezervacijaController.cs",
-              "RelativeDocumentMoniker": "Restoran\\API\\Controllers\\RezervacijaController.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\API\\Controllers\\RezervacijaController.cs",
-              "RelativeToolTip": "Restoran\\API\\Controllers\\RezervacijaController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAkwEMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T16:38:45.733Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PlacanjeController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\API\\Controllers\\PlacanjeController.cs",
-              "RelativeDocumentMoniker": "Restoran\\API\\Controllers\\PlacanjeController.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\API\\Controllers\\PlacanjeController.cs",
-              "RelativeToolTip": "Restoran\\API\\Controllers\\PlacanjeController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAQwDsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T16:37:25.689Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "NarudzbaController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\API\\Controllers\\NarudzbaController.cs",
-              "RelativeDocumentMoniker": "Restoran\\API\\Controllers\\NarudzbaController.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\API\\Controllers\\NarudzbaController.cs",
-              "RelativeToolTip": "Restoran\\API\\Controllers\\NarudzbaController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T16:37:21.639Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MeniController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\API\\Controllers\\MeniController.cs",
-              "RelativeDocumentMoniker": "Restoran\\API\\Controllers\\MeniController.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\API\\Controllers\\MeniController.cs",
-              "RelativeToolTip": "Restoran\\API\\Controllers\\MeniController.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T16:37:17.196Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MeniService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\BLL\\Services\\MeniService.cs",
-              "RelativeDocumentMoniker": "Restoran\\BLL\\Services\\MeniService.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\BLL\\Services\\MeniService.cs",
-              "RelativeToolTip": "Restoran\\BLL\\Services\\MeniService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T15:27:28.904Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "KorisniciController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\API\\Controllers\\KorisniciController.cs",
-              "RelativeDocumentMoniker": "Restoran\\API\\Controllers\\KorisniciController.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\NoviAngularProjekat\\DiplomskiISR\\Dopunjena\\Dopunjena\\Restoran\\Restoran\\API\\Controllers\\KorisniciController.cs",
-              "RelativeToolTip": "Restoran\\API\\Controllers\\KorisniciController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAA5wDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T21:46:03.514Z"
             }
           ]
         },

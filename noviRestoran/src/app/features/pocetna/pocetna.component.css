@@ -803,6 +803,9 @@ section,
     font-size: 13px;
   }
 }
+.qr-section {
+  margin-top: 15px; 
+}
 
 @keyframes up-down {
   0% {
@@ -814,7 +817,7 @@ section,
   }
 }
 
-/* added Nermaa*/
+
 .align-items-center {
   align-items: center !important;
 }
@@ -831,7 +834,7 @@ section,
   display: flex !important;
 }
 
-/* novi */
+
 
 @media (min-width: 1200px) {
 

@@ -13,7 +13,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './pocetna.component.css'
 })
 export class PocetnaComponent {
-  myAngularxQrCode: string = 'https://example.com';
+  /*myAngularxQrCode: string = 'https://example.com';*/
+myAngularxQrCode: string = 'http://192.168.0.29:4200/rezervacije';
+
+
+
+
+
+
   constructor(private authService: AuthService, public roleService: RoleService) { }
 
   logout() {
